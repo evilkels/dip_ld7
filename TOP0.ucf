@@ -1,0 +1,7 @@
+NET "NRESET" LOC = "N17";
+NET "CLK" LOC = "C9";
+NET "R" LOC = "H14";
+NET "G" LOC = "H15";
+NET "B" LOC = "G15";
+NET "VSYNC" LOC = "F14";
+NET "HSYNC" LOC = "F15";
