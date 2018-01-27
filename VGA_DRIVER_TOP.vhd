@@ -1,3 +1,6 @@
+--LD7 project VGA_DISPLAY MODULE
+--Elvijs Vilkels and Raivis Ginters
+
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.STD_LOGIC_unsigned.ALL;
@@ -122,23 +125,15 @@ begin
 		end if;
 	end process;
 	
-	RGB_CHECK:process(Rin, Gin, Bin)
-		variable RECTANGLE_WIDTH : integer := 32;
-		variable RECTANGLE_HEIGHT : integer := 64;
+	RGB_CHECK:process(RIN, GIN, BIN)
 	begin
 		if HSYNC_VAL < H_PIXELS and VSYNC_VAL < V_PIXELS then
-			if HSYNC_VAL < RECTANGLE_WIDTH and VSYNC_VAL < RECTANGLE_HEIGHT then
-				R <= Rin;
-				G <= Gin;
-				B <= Bin;
-			else
-				R <= '0';
-				G <= '1';
-				B <= '0';
-			end if;
-		else
-			R <= '0';
-			G <= '0';
+			R <= RIN;
+			G <= GIN;
+			B <= BIN;
+		else 
+			R <= '0'; 
+			G <= '0'; 
 			B <= '0';
 		end if;
 	end process;

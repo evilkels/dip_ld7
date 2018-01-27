@@ -1,3 +1,6 @@
+vhdl work "ipcore_dir/ROM_BLUE.vhd"
+vhdl work "ipcore_dir/ROM_RED.vhd"
+vhdl work "ipcore_dir/ROM_GREEN.vhd"
 vhdl work "COUNTER_DIVIDER.vhd"
 vhdl work "COUNTER.vhd"
 vhdl work "VGA_DRIVER_TOP.vhd"

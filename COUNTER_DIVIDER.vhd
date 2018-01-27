@@ -1,3 +1,5 @@
+--Counter divider module for clock frequency
+
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.STD_LOGIC_unsigned.ALL;
