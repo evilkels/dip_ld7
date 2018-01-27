@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=/home/amandaagnese/ld7_RG_EV/TOP0.ncd
+OUTFILE=/home/amandaagnese/ld7_RG_EV/TOP0.bit
+FAMILY=Spartan3E
+PART=xc3s500e-5fg320
+WORKINGDIR=/home/amandaagnese/ld7_RG_EV
+LICENSE=WebPack
+USER_INFO=211462009_0_0_634

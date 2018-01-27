@@ -1,0 +1,46 @@
+xst -intstyle ise -ifn "/home/amandaagnese/ld7_RG_EV/TOP0.xst" -ofn "/home/amandaagnese/ld7_RG_EV/TOP0.syr" 
+xst -intstyle ise -ifn "/home/amandaagnese/ld7_RG_EV/TOP0.xst" -ofn "/home/amandaagnese/ld7_RG_EV/TOP0.syr" 
+xst -intstyle ise -ifn "/home/amandaagnese/ld7_RG_EV/TOP0.xst" -ofn "/home/amandaagnese/ld7_RG_EV/TOP0.syr" 
+xst -intstyle ise -ifn "/home/amandaagnese/ld7_RG_EV/TOP0.xst" -ofn "/home/amandaagnese/ld7_RG_EV/TOP0.syr" 
+xst -intstyle ise -ifn "/home/amandaagnese/ld7_RG_EV/TOP0.xst" -ofn "/home/amandaagnese/ld7_RG_EV/TOP0.syr" 
+xst -intstyle ise -ifn "/home/amandaagnese/ld7_RG_EV/TOP0.xst" -ofn "/home/amandaagnese/ld7_RG_EV/TOP0.syr" 
+xst -intstyle ise -ifn "/home/amandaagnese/ld7_RG_EV/TOP0.xst" -ofn "/home/amandaagnese/ld7_RG_EV/TOP0.syr" 
+xst -intstyle ise -ifn "/home/amandaagnese/ld7_RG_EV/TOP0.xst" -ofn "/home/amandaagnese/ld7_RG_EV/TOP0.syr" 
+xst -intstyle ise -ifn "/home/amandaagnese/ld7_RG_EV/TOP0.xst" -ofn "/home/amandaagnese/ld7_RG_EV/TOP0.syr" 
+xst -intstyle ise -ifn "/home/amandaagnese/ld7_RG_EV/TOP0.xst" -ofn "/home/amandaagnese/ld7_RG_EV/TOP0.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-5 TOP0.ngc TOP0.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o TOP0_map.ncd TOP0.ngd TOP0.pcf 
+par -w -intstyle ise -ol high -t 1 TOP0_map.ncd TOP0.ncd TOP0.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml TOP0.twx TOP0.ncd -o TOP0.twr TOP0.pcf 
+bitgen -intstyle ise -f TOP0.ut TOP0.ncd 
+xst -intstyle ise -ifn "/home/amandaagnese/ld7_RG_EV/TOP0.xst" -ofn "/home/amandaagnese/ld7_RG_EV/TOP0.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-5 TOP0.ngc TOP0.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o TOP0_map.ncd TOP0.ngd TOP0.pcf 
+par -w -intstyle ise -ol high -t 1 TOP0_map.ncd TOP0.ncd TOP0.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml TOP0.twx TOP0.ncd -o TOP0.twr TOP0.pcf 
+bitgen -intstyle ise -f TOP0.ut TOP0.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-5 TOP0.ngc TOP0.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o TOP0_map.ncd TOP0.ngd TOP0.pcf 
+par -w -intstyle ise -ol high -t 1 TOP0_map.ncd TOP0.ncd TOP0.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml TOP0.twx TOP0.ncd -o TOP0.twr TOP0.pcf 
+bitgen -intstyle ise -f TOP0.ut TOP0.ncd 
+xst -intstyle ise -ifn "/home/amandaagnese/ld7_RG_EV/TOP0.xst" -ofn "/home/amandaagnese/ld7_RG_EV/TOP0.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc TOP0.ucf -p xc3s500e-fg320-5 TOP0.ngc TOP0.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o TOP0_map.ncd TOP0.ngd TOP0.pcf 
+par -w -intstyle ise -ol high -t 1 TOP0_map.ncd TOP0.ncd TOP0.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml TOP0.twx TOP0.ncd -o TOP0.twr TOP0.pcf -ucf TOP0.ucf 
+bitgen -intstyle ise -f TOP0.ut TOP0.ncd 
+xst -intstyle ise -ifn "/home/amandaagnese/ld7_RG_EV/TOP0.xst" -ofn "/home/amandaagnese/ld7_RG_EV/TOP0.syr" 
+xst -intstyle ise -ifn "/home/amandaagnese/ld7_RG_EV/TOP0.xst" -ofn "/home/amandaagnese/ld7_RG_EV/TOP0.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc TOP0.ucf -p xc3s500e-fg320-5 TOP0.ngc TOP0.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o TOP0_map.ncd TOP0.ngd TOP0.pcf 
+par -w -intstyle ise -ol high -t 1 TOP0_map.ncd TOP0.ncd TOP0.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml TOP0.twx TOP0.ncd -o TOP0.twr TOP0.pcf -ucf TOP0.ucf 
+bitgen -intstyle ise -f TOP0.ut TOP0.ncd 
+xst -intstyle ise -ifn "/home/amandaagnese/ld7_RG_EV/TOP0.xst" -ofn "/home/amandaagnese/ld7_RG_EV/TOP0.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc TOP0.ucf -p xc3s500e-fg320-5 TOP0.ngc TOP0.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o TOP0_map.ncd TOP0.ngd TOP0.pcf 
+par -w -intstyle ise -ol high -t 1 TOP0_map.ncd TOP0.ncd TOP0.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml TOP0.twx TOP0.ncd -o TOP0.twr TOP0.pcf -ucf TOP0.ucf 
+bitgen -intstyle ise -f TOP0.ut TOP0.ncd 
+bitgen -intstyle ise -f TOP0.ut TOP0.ncd 

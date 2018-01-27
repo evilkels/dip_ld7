@@ -1,0 +1,476 @@
+Release 14.7 - xst P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.08 secs
+ 
+--> 
+Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.08 secs
+ 
+--> 
+Reading design: TOP0.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "TOP0.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "TOP0"
+Output Format                      : NGC
+Target Device                      : xc3s500e-5-fg320
+
+---- Source Options
+Top Module Name                    : TOP0
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "/home/amandaagnese/ld7_RG_EV/COUNTER_DIVIDER.vhd" in Library work.
+Architecture behavioral of Entity counter_divider is up to date.
+Compiling vhdl file "/home/amandaagnese/ld7_RG_EV/COUNTER.vhd" in Library work.
+Architecture behavioral of Entity counter is up to date.
+Compiling vhdl file "/home/amandaagnese/ld7_RG_EV/VGA_DRIVER_TOP.vhd" in Library work.
+Entity <vga_driver_top> compiled.
+Entity <vga_driver_top> (Architecture <behavioral>) compiled.
+Compiling vhdl file "/home/amandaagnese/ld7_RG_EV/TOP0.vhd" in Library work.
+Architecture behavioral of Entity top0 is up to date.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <TOP0> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <COUNTER_DIVIDER> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <COUNTER> in library <work> (architecture <behavioral>) with generics.
+	N = 8
+
+Analyzing hierarchy for entity <VGA_DRIVER_TOP> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <COUNTER_DIVIDER> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <COUNTER> in library <work> (architecture <behavioral>) with generics.
+	N = 10
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <TOP0> in library <work> (Architecture <behavioral>).
+Entity <TOP0> analyzed. Unit <TOP0> generated.
+
+Analyzing Entity <COUNTER_DIVIDER> in library <work> (Architecture <behavioral>).
+WARNING:Xst:819 - "/home/amandaagnese/ld7_RG_EV/COUNTER_DIVIDER.vhd" line 13: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <CntVal>
+Entity <COUNTER_DIVIDER> analyzed. Unit <COUNTER_DIVIDER> generated.
+
+Analyzing generic Entity <COUNTER.1> in library <work> (Architecture <behavioral>).
+	N = 8
+Entity <COUNTER.1> analyzed. Unit <COUNTER.1> generated.
+
+Analyzing Entity <VGA_DRIVER_TOP> in library <work> (Architecture <behavioral>).
+WARNING:Xst:819 - "/home/amandaagnese/ld7_RG_EV/VGA_DRIVER_TOP.vhd" line 125: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <HSYNC_VAL>, <VSYNC_VAL>
+Entity <VGA_DRIVER_TOP> analyzed. Unit <VGA_DRIVER_TOP> generated.
+
+Analyzing generic Entity <COUNTER.2> in library <work> (Architecture <behavioral>).
+	N = 10
+Entity <COUNTER.2> analyzed. Unit <COUNTER.2> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <COUNTER_DIVIDER>.
+    Related source file is "/home/amandaagnese/ld7_RG_EV/COUNTER_DIVIDER.vhd".
+    Found 2-bit up counter for signal <CntVal>.
+    Summary:
+	inferred   1 Counter(s).
+Unit <COUNTER_DIVIDER> synthesized.
+
+
+Synthesizing Unit <COUNTER_1>.
+    Related source file is "/home/amandaagnese/ld7_RG_EV/COUNTER.vhd".
+    Found 9-bit up counter for signal <CntVal>.
+    Summary:
+	inferred   1 Counter(s).
+Unit <COUNTER_1> synthesized.
+
+
+Synthesizing Unit <COUNTER_2>.
+    Related source file is "/home/amandaagnese/ld7_RG_EV/COUNTER.vhd".
+    Found 11-bit up counter for signal <CntVal>.
+    Summary:
+	inferred   1 Counter(s).
+Unit <COUNTER_2> synthesized.
+
+
+Synthesizing Unit <VGA_DRIVER_TOP>.
+    Related source file is "/home/amandaagnese/ld7_RG_EV/VGA_DRIVER_TOP.vhd".
+WARNING:Xst:1780 - Signal <RECTANGLE_WIDTH<31:12>> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:653 - Signal <RECTANGLE_WIDTH<11:0>> is used but never assigned. This sourceless signal will be automatically connected to value 000000100000.
+WARNING:Xst:1780 - Signal <RECTANGLE_HEIGHT<31:12>> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:653 - Signal <RECTANGLE_HEIGHT<11:0>> is used but never assigned. This sourceless signal will be automatically connected to value 000001000000.
+    Found 12-bit comparator less for signal <B$cmp_lt0000> created at line 129.
+    Found 12-bit comparator less for signal <B$cmp_lt0001> created at line 129.
+    Found 12-bit comparator less for signal <B$cmp_lt0002> created at line 130.
+    Found 12-bit comparator less for signal <B$cmp_lt0003> created at line 130.
+    Found 12-bit comparator greatequal for signal <HSYNC$cmp_ge0000> created at line 109.
+    Found 12-bit comparator less for signal <HSYNC$cmp_lt0000> created at line 109.
+    Found 12-bit comparator greatequal for signal <VSYNC$cmp_ge0000> created at line 118.
+    Found 12-bit comparator less for signal <VSYNC$cmp_lt0000> created at line 118.
+    Summary:
+	inferred   8 Comparator(s).
+Unit <VGA_DRIVER_TOP> synthesized.
+
+
+Synthesizing Unit <TOP0>.
+    Related source file is "/home/amandaagnese/ld7_RG_EV/TOP0.vhd".
+WARNING:Xst:646 - Signal <V_VAL_TOP_OUT> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:653 - Signal <Rin_Top> is used but never assigned. This sourceless signal will be automatically connected to value 0.
+WARNING:Xst:1780 - Signal <ROM_RED_0_out> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <ROM_GREEN_0_out> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <ROM_BLUE_0_out> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <PX_VAL> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <H_VAL_TOP_OUT> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:653 - Signal <Gin_Top> is used but never assigned. This sourceless signal will be automatically connected to value 0.
+WARNING:Xst:653 - Signal <COUNTER_ENABLED> is used but never assigned. This sourceless signal will be automatically connected to value 1.
+WARNING:Xst:653 - Signal <Bin_Top> is used but never assigned. This sourceless signal will be automatically connected to value 1.
+Unit <TOP0> synthesized.
+
+WARNING:Xst:524 - All outputs of the instance <COUNTER_PX> of the block <COUNTER_1> are unconnected in block <TOP0>.
+   This instance will be removed from the design along with all underlying logic
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Counters                                             : 4
+ 11-bit up counter                                     : 2
+ 2-bit up counter                                      : 2
+# Comparators                                          : 8
+ 12-bit comparator greatequal                          : 2
+ 12-bit comparator less                                : 6
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+WARNING:Xst:1290 - Hierarchical block <COUNTER_DIVIDER_0> is unconnected in block <TOP0>.
+   It will be removed from the design.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Counters                                             : 4
+ 11-bit up counter                                     : 2
+ 2-bit up counter                                      : 2
+# Comparators                                          : 8
+ 12-bit comparator greatequal                          : 2
+ 12-bit comparator less                                : 6
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:2677 - Node <COUNTER_DIVIDER_0/CntVal_1> of sequential type is unconnected in block <VGA_DRIVER_TOP>.
+
+Optimizing unit <TOP0> ...
+
+Optimizing unit <VGA_DRIVER_TOP> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block TOP0, actual ratio is 0.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 23
+ Flip-Flops                                            : 23
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : TOP0.ngr
+Top Level Output File Name         : TOP0
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 7
+
+Cell Usage :
+# BELS                             : 96
+#      GND                         : 1
+#      INV                         : 4
+#      LUT1                        : 20
+#      LUT2                        : 1
+#      LUT3                        : 8
+#      LUT4                        : 17
+#      LUT4_L                      : 1
+#      MUXCY                       : 20
+#      MUXF5                       : 1
+#      VCC                         : 1
+#      XORCY                       : 22
+# FlipFlops/Latches                : 23
+#      FDC                         : 1
+#      FDCE                        : 22
+# Clock Buffers                    : 2
+#      BUFG                        : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 6
+#      IBUF                        : 1
+#      OBUF                        : 5
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s500efg320-5 
+
+ Number of Slices:                       27  out of   4656     0%  
+ Number of Slice Flip Flops:             23  out of   9312     0%  
+ Number of 4 input LUTs:                 51  out of   9312     0%  
+ Number of IOs:                           7
+ Number of bonded IOBs:                   7  out of    232     3%  
+ Number of GCLKs:                         2  out of     24     8%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+--------------------------------------------+------------------------+-------+
+Clock Signal                                | Clock buffer(FF name)  | Load  |
+--------------------------------------------+------------------------+-------+
+VGA_DRIVER_TOP_0/COUNTER_DIVIDER_0/CntVal_01| BUFG                   | 22    |
+CLK                                         | BUFGP                  | 1     |
+--------------------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+----------------------------------------------------------------------+--------------------------------------------------+-------+
+Control Signal                                                        | Buffer(FF name)                                  | Load  |
+----------------------------------------------------------------------+--------------------------------------------------+-------+
+VGA_DRIVER_TOP_0/HSYNC_RESET_inv(VGA_DRIVER_TOP_0/HSYNC_RESET_inv39:O)| NONE(VGA_DRIVER_TOP_0/COUNTER_HSYNC/CntVal_0)    | 11    |
+VGA_DRIVER_TOP_0/VSYNC_RESET_inv(VGA_DRIVER_TOP_0/VSYNC_RESET_inv33:O)| NONE(VGA_DRIVER_TOP_0/COUNTER_VSYNC/CntVal_0)    | 11    |
+VGA_DRIVER_TOP_0/NRESET_inv(VGA_DRIVER_TOP_0/NRESET_inv1_INV_0:O)     | NONE(VGA_DRIVER_TOP_0/COUNTER_DIVIDER_0/CntVal_0)| 1     |
+----------------------------------------------------------------------+--------------------------------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -5
+
+   Minimum period: 4.114ns (Maximum Frequency: 243.069MHz)
+   Minimum input arrival time before clock: No path found
+   Maximum output required time after clock: 7.771ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'VGA_DRIVER_TOP_0/COUNTER_DIVIDER_0/CntVal_01'
+  Clock period: 4.114ns (frequency: 243.069MHz)
+  Total number of paths / destination ports: 253 / 33
+-------------------------------------------------------------------------
+Delay:               4.114ns (Levels of Logic = 2)
+  Source:            VGA_DRIVER_TOP_0/COUNTER_HSYNC/CntVal_10 (FF)
+  Destination:       VGA_DRIVER_TOP_0/COUNTER_VSYNC/CntVal_10 (FF)
+  Source Clock:      VGA_DRIVER_TOP_0/COUNTER_DIVIDER_0/CntVal_01 rising
+  Destination Clock: VGA_DRIVER_TOP_0/COUNTER_DIVIDER_0/CntVal_01 rising
+
+  Data Path: VGA_DRIVER_TOP_0/COUNTER_HSYNC/CntVal_10 to VGA_DRIVER_TOP_0/COUNTER_VSYNC/CntVal_10
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             5   0.514   0.690  VGA_DRIVER_TOP_0/COUNTER_HSYNC/CntVal_10 (VGA_DRIVER_TOP_0/COUNTER_HSYNC/CntVal_10)
+     LUT3:I0->O            2   0.612   0.410  VGA_DRIVER_TOP_0/B11 (VGA_DRIVER_TOP_0/N7)
+     LUT3:I2->O           11   0.612   0.793  VGA_DRIVER_TOP_0/VSYNC_H_PERIOD_OUT_cmp_eq000018 (VGA_DRIVER_TOP_0/VSYNC_H_PERIOD_OUT)
+     FDCE:CE                   0.483          VGA_DRIVER_TOP_0/COUNTER_VSYNC/CntVal_0
+    ----------------------------------------
+    Total                      4.114ns (2.221ns logic, 1.893ns route)
+                                       (54.0% logic, 46.0% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'CLK'
+  Clock period: 2.131ns (frequency: 469.274MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               2.131ns (Levels of Logic = 1)
+  Source:            VGA_DRIVER_TOP_0/COUNTER_DIVIDER_0/CntVal_0 (FF)
+  Destination:       VGA_DRIVER_TOP_0/COUNTER_DIVIDER_0/CntVal_0 (FF)
+  Source Clock:      CLK rising
+  Destination Clock: CLK rising
+
+  Data Path: VGA_DRIVER_TOP_0/COUNTER_DIVIDER_0/CntVal_0 to VGA_DRIVER_TOP_0/COUNTER_DIVIDER_0/CntVal_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              2   0.514   0.380  VGA_DRIVER_TOP_0/COUNTER_DIVIDER_0/CntVal_0 (VGA_DRIVER_TOP_0/COUNTER_DIVIDER_0/CntVal_01)
+     INV:I->O              1   0.612   0.357  VGA_DRIVER_TOP_0/COUNTER_DIVIDER_0/Mcount_CntVal_xor<0>11_INV_0 (VGA_DRIVER_TOP_0/Result<0>)
+     FDC:D                     0.268          VGA_DRIVER_TOP_0/COUNTER_DIVIDER_0/CntVal_0
+    ----------------------------------------
+    Total                      2.131ns (1.394ns logic, 0.737ns route)
+                                       (65.4% logic, 34.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'VGA_DRIVER_TOP_0/COUNTER_DIVIDER_0/CntVal_01'
+  Total number of paths / destination ports: 50 / 4
+-------------------------------------------------------------------------
+Offset:              7.771ns (Levels of Logic = 5)
+  Source:            VGA_DRIVER_TOP_0/COUNTER_HSYNC/CntVal_7 (FF)
+  Destination:       G (PAD)
+  Source Clock:      VGA_DRIVER_TOP_0/COUNTER_DIVIDER_0/CntVal_01 rising
+
+  Data Path: VGA_DRIVER_TOP_0/COUNTER_HSYNC/CntVal_7 to G
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             6   0.514   0.721  VGA_DRIVER_TOP_0/COUNTER_HSYNC/CntVal_7 (VGA_DRIVER_TOP_0/COUNTER_HSYNC/CntVal_7)
+     LUT4:I0->O            1   0.612   0.387  VGA_DRIVER_TOP_0/G59 (VGA_DRIVER_TOP_0/G59)
+     LUT3:I2->O            1   0.612   0.000  VGA_DRIVER_TOP_0/G77_F (N12)
+     MUXF5:I0->O           1   0.278   0.509  VGA_DRIVER_TOP_0/G77 (VGA_DRIVER_TOP_0/G77)
+     LUT4:I0->O            1   0.612   0.357  VGA_DRIVER_TOP_0/G129 (G_OBUF)
+     OBUF:I->O                 3.169          G_OBUF (G)
+    ----------------------------------------
+    Total                      7.771ns (5.797ns logic, 1.974ns route)
+                                       (74.6% logic, 25.4% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 5.00 secs
+Total CPU time to Xst completion: 5.70 secs
+ 
+--> 
+
+
+Total memory usage is 517628 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   19 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

@@ -1,0 +1,4 @@
+vhdl work "COUNTER_DIVIDER.vhd"
+vhdl work "COUNTER.vhd"
+vhdl work "VGA_DRIVER_TOP.vhd"
+vhdl work "TOP0.vhd"

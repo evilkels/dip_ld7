@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "/home/amandaagnese/ld7_RG_EV/VGA_DRIVER_TOP.xst" -ofn "/home/amandaagnese/ld7_RG_EV/VGA_DRIVER_TOP.syr" 
